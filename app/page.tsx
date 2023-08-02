@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <div className='text-center'>
-        <Button>Re test</Button>
+        <Button>Re tecjkndskjcnl;kdsnckldcdsst</Button>
       </div>
     </>
   )
