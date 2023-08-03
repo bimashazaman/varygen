@@ -1,5 +1,6 @@
+
 const DashboardPage = () => {
-  return <div>kjhj</div>
+  return <div></div>
 }
 
 export default DashboardPage
