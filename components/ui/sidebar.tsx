@@ -12,6 +12,8 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { usePathname } from 'next/navigation'
+
 const Sidebar = () => {
   const routes = [
     {
@@ -63,6 +65,8 @@ const Sidebar = () => {
     },
   ]
 
+  const pathname = usePathname()
+
   return (
     <div className=' space-y-4 flex flex-col h-full  text-white'>
       <div className=' px-3 flex-1'>
@@ -76,9 +80,11 @@ const Sidebar = () => {
           {routes.map((route, index) => (
             <div
               key={index}
-              className='flex items-center space-x-4
-             hover:bg-gray-700 rounded-md p-2 cursor-pointer
-            '
+              className={
+                'flex items-center space-x-4 hover:bg-gray-700 rounded-md p-2 cursor-pointer ' +
+                (pathname === route.path ? 'bg-gray-700' : '') +
+                ''
+              }
             >
               <route.icon className={`w-6 h-6 ${route.color}`} />
               <Link href={route.path}>
