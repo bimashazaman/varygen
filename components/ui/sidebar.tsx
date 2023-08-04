@@ -86,8 +86,11 @@ const Sidebar = () => {
                 ''
               }
             >
-              <route.icon className={`w-6 h-6 ${route.color}`} />
-              <Link href={route.path}>
+              <Link
+                href={route.path}
+                className='flex items-center space-x-4 hover:bg-gray-700 rounded-md p-2 cursor-pointer'
+              >
+                <route.icon className={`w-6 h-6 ${route.color}`} />
                 <div className='text-sm font-medium'>{route.name}</div>
               </Link>
             </div>
