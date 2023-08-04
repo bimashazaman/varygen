@@ -13,15 +13,14 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         md:fixed
         md:inset-y-0
         z-[80]
-        bg-gray-900
-        text-gray-100
+        bg-gradient-to-b from-black to-blue-950
+        text-gray-100   
         w-64
         px-4
-        py-8
         overflow-y-auto
         md:w-72
         md:px-8
-        md:py-12
+        drop-shadow-xl
         '
       >
         <div>
