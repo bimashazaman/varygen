@@ -1,38 +1,33 @@
-import { LucideIcon } from 'lucide-react'
+import { Icon } from 'lucide-react'
+
+import { cn } from '@/lib/utils'
 
 interface HeadingProps {
   title: string
   description: string
-  Icon: LucideIcon
+  icon: Icon
   iconColor?: string
-  iconBgColor?: string
+  bgColor?: string
 }
 
-const Heading = ({
+export const Heading = ({
   title,
   description,
-  Icon,
+  icon: Icon,
   iconColor,
-  iconBgColor,
+  bgColor,
 }: HeadingProps) => {
   return (
     <>
-      <div className='flex items-center space-x-4 lg:px-8 px-4 mb-5'>
-        <div
-          className={`flex items-center justify-center rounded-full w-12 h-12 ${iconBgColor}`}
-        >
-          <Icon className={`w-6 h-6 ${iconColor}`} />
+      <div className='px-4 lg:px-8 flex items-center gap-x-3 mb-8'>
+        <div className={cn('p-2 w-fit rounded-md', bgColor)}>
+          <Icon className={cn('w-10 h-10', iconColor)} />
         </div>
-        <div className='flex flex-col'>
-          <h3 className=' text-lg font-bold text-gray-600 dark:text-white'>
-            {title}
-          </h3>
-          <div className=' text-gray-400 dark:text-gray-400'>{description}</div>
+        <div>
+          <h2 className='text-3xl font-bold'>{title}</h2>
+          <p className='text-sm text-muted-foreground'>{description}</p>
         </div>
       </div>
-      <hr className='my-4' />
     </>
   )
 }
-
-export default Heading
