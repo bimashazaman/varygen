@@ -1,7 +1,12 @@
 import Navbar from '@/components/ui/navbar'
 import Sidebar from '@/components/ui/sidebar'
 
-const ConversationLayout = ({ children }: { children: React.ReactNode }) => {
+import { checkSubscription } from '@/lib/subscription'
+import { getApiLimitCount } from '@/lib/api-limit'
+
+const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
+  const apiLimitCount = await getApiLimitCount()
+  const isPro = await checkSubscription()
   return (
     <div className=' relative h-full'>
       <div
@@ -12,7 +17,6 @@ const ConversationLayout = ({ children }: { children: React.ReactNode }) => {
         md:flex-col
         md:fixed
         md:inset-y-0
-        z-[80]
         bg-gradient-to-b from-black to-blue-950
         text-gray-100   
         w-64
@@ -24,7 +28,7 @@ const ConversationLayout = ({ children }: { children: React.ReactNode }) => {
         '
       >
         <div>
-          <Sidebar />
+          <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} />
         </div>
       </div>
       <div className='md:pl-72'>
@@ -35,4 +39,4 @@ const ConversationLayout = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
-export default ConversationLayout
+export default DashboardLayout
