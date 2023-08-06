@@ -1,10 +1,18 @@
 'use client'
 
 import { Menu } from 'lucide-react'
+import { useState } from 'react'
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 import Sidebar from './ui/sidebar'
 
-const MobileSidebar = () => {
+export const MobileSidebar = ({
+  apiLimitCount = 0,
+  isPro = false,
+}: {
+  apiLimitCount: number
+  isPro: boolean
+}) => {
+  const [isMounted, setIsMounted] = useState(false)
   return (
     <Sheet>
       <SheetTrigger>
@@ -16,7 +24,7 @@ const MobileSidebar = () => {
         side='left'
         className='p-0  bg-gradient-to-b from-black to-blue-950 text-white'
       >
-        <Sidebar />
+        <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} />
       </SheetContent>
     </Sheet>
   )

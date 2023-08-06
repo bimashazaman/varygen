@@ -13,8 +13,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { usePathname } from 'next/navigation'
+import { FreeCounter } from '../free-counter'
 
-const Sidebar = () => {
+export const Sidebar = ({
+  apiLimitCount = 0,
+  isPro = false,
+}: {
+  apiLimitCount: number
+  isPro: boolean
+}) => {
   const routes = [
     {
       name: 'Dashboard',
@@ -69,7 +76,7 @@ const Sidebar = () => {
 
   return (
     <div className=' space-y-4 flex flex-col h-full  text-white'>
-      <div className=' px-3 flex-1'>
+      <div className='  flex-1'>
         <Link href='/dashboard' className=' flex items-center pl-3 mb-14'>
           <div className=' items-center text-start flex'>
             <Image src='/logo/logo.png' alt='logo' width={100} height={100} />
@@ -97,6 +104,8 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
+
+      <FreeCounter apiLimitCount={apiLimitCount} isPro={isPro} />
     </div>
   )
 }
