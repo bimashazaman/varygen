@@ -32,21 +32,21 @@ export const VideoFeature = () => {
               <li className='mb-6'>
                 <span className='font-semibold text-purple-500'>
                   Next-Level Video Quality:
-                </span>{' '}
+                </span>
                 With VaryGen, experience the magic of AI as it crafts visually
                 stunning and immersive videos for you.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-purple-500'>
                   Instant Downloads:
-                </span>{' '}
+                </span>
                 Say goodbye to waiting. Access and download your AI-rendered
                 videos at the touch of a button.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-purple-500'>
                   Tailored to Your Needs:
-                </span>{' '}
+                </span>
                 Every video we produce is uniquely molded to your specific
                 preferences and requirements.
               </li>

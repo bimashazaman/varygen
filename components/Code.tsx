@@ -1,31 +1,24 @@
 import Link from 'next/link'
 
 export const CodeFeature = () => {
-  const codeString = `const greet = (name) => {
-  console.log("Hello, " + name + "!");
-};
-
-greet("World");`
-
   return (
     <div className='px-10 pb-20 mt-14'>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4'>
         <div>
-          {/* Placeholder for code example or related visual element */}
           <div className='p-6 mt-8 rounded-lg shadow-lg shadow-black bg-gray-800 text-gray-200'>
             {/* Simple code example */}
-            <pre>
-  <code>
-    <span style={{color: '#dcdcaa'}}>const</span> greet = (<span style={{color: '#9cdcfe'}}>name</span>) => {'{'}
-    <br />
-    <span style={{color: '#569cd6'}}>console</span>.log(<span style={{color: '#ce9178'}}>"Hello, "</span> + <span style={{color: '#9cdcfe'}}>name</span> + <span style={{color: '#ce9178'}}>"!"</span>);
-    <br />
-    {'}'};
-    <br />
-    greet(<span style={{color: '#ce9178'}}>"World"</span>);
-  </code>
-</pre>
-
+            <div>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload='metadata'
+                className='w-full aspect-video mt-8 rounded-lg shadow-lg shadow-black'
+              >
+                <source src='/conversation.mp4' type='video/mp4' />
+              </video>
+            </div>
           </div>
         </div>
         <div className='px-4 mb:px-0 mt-1 animate-fade-in'>
@@ -45,35 +38,35 @@ greet("World");`
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   Efficient Code Generation:
-                </span>{' '}
-                VaryGen's AI can help you generate clean, efficient code for
-                your projects in seconds.
+                </span>
+                VaryGens AI can help you generate clean, efficient code for your
+                projects in seconds.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   Immediate Access:
-                </span>{' '}
+                </span>
                 Get your AI-generated code instantly, ready for download or
                 integration.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   Personalized to Your Needs:
-                </span>{' '}
+                </span>
                 Our AI crafts code tailored to your specific requirements and
                 coding standards.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   AI-Enhanced Development:
-                </span>{' '}
+                </span>
                 Supercharge your coding process with our AI-powered code
                 generation capabilities.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   Break Through Complexity:
-                </span>{' '}
+                </span>
                 With VaryGen, tackle complex coding tasks with ease and
                 efficiency.
               </li>

@@ -34,28 +34,28 @@ export const Conversation = () => {
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   Innovative Text Generation:
-                </span>{' '}
-                VaryGen's AI model creates content that is contextually relevant
-                and meaningful.
+                </span>
+                Our AI model creates content that is contextually relevant and
+                meaningful.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   Personalized Output:
-                </span>{' '}
+                </span>
                 Our AI tailors its text generation to your specific needs, going
                 beyond standard templates.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   AI-Powered Excellence:
-                </span>{' '}
+                </span>
                 We harness artificial intelligence to revolutionize the way you
                 generate and convert text.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-green-500'>
                   Break Content Boundaries:
-                </span>{' '}
+                </span>
                 VaryGen transforms simple text inputs into comprehensive,
                 engaging outputs that deliver results.
               </li>

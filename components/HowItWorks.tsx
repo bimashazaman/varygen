@@ -11,7 +11,7 @@ const HowItWorks = () => {
         <p className='text-lg text-gray-300 leading-6'>
           Getting started with VaryGen is simple. Click on get started, and let
           our AI work its magic. Watch as your ideas transform into reality, all
-          at the click of a button. It's that easy.
+          at the click of a button. Its that easy.
         </p>
       </div>
       <div className='flex justify-center mt-8'>

@@ -21,21 +21,21 @@ export const ImageFeature = () => {
               <li className='mb-6'>
                 <span className='font-semibold text-yellow-500'>
                   High-Resolution Image Generation:
-                </span>{' '}
-                VaryGen's AI model creates high-quality images that are visually
+                </span>
+                Our AI model creates high-quality images that are visually
                 stunning.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-yellow-500'>
                   One-Click Downloads:
-                </span>{' '}
+                </span>
                 Easily download your AI-generated images with a single click.
               </li>
 
               <li className='mb-6'>
                 <span className='font-semibold text-yellow-500'>
                   Shatter Visual Boundaries:
-                </span>{' '}
+                </span>
                 VaryGen transforms simple image concepts into captivating
                 visuals that impress your audience.
               </li>

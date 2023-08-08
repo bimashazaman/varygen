@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 
 export const AudioFeature = () => {
@@ -20,35 +22,35 @@ export const AudioFeature = () => {
               <li className='mb-6'>
                 <span className='font-semibold text-pink-500'>
                   Unmatched Soundscapes:
-                </span>{' '}
-                With VaryGen's AI, create unique, immersive soundscapes that add
+                </span>
+                With Our AI, create unique, immersive soundscapes that add
                 depth to your projects.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-pink-500'>
                   Hassle-Free Downloads:
-                </span>{' '}
+                </span>
                 Your AI-constructed audio files are instantly downloadable with
                 just a click.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-pink-500'>
                   Precision Tuning:
-                </span>{' '}
+                </span>
                 We ensure each audio piece is fine-tuned to your exact
                 preferences and project requirements.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-pink-500'>
                   AI-Accelerated Creativity:
-                </span>{' '}
+                </span>
                 Amplify your creative process with our AI-powered audio
                 generation tool.
               </li>
               <li className='mb-6'>
                 <span className='font-semibold text-pink-500'>
                   Elevate Your Sonic Experience:
-                </span>{' '}
+                </span>
                 VaryGen leverages AI to create captivating audio experiences
                 that engage and inspire.
               </li>
