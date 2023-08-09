@@ -19,40 +19,26 @@ export const AudioFeature = () => {
               </span>
             </h2>
             <ul className='list-disc list-inside text-base text-gray-300 leading-6'>
-              <li className='mb-6'>
-                <span className='font-semibold text-pink-500'>
+              <li className='mb-6 text-gray-800 dark:text-gray-200 font-medium'>
+                <span className='font-semibold text-pink-500 pr-2'>
                   Unmatched Soundscapes:
                 </span>
-                With Our AI, create unique, immersive soundscapes that add
-                depth to your projects.
+                With Our AI, create unique, immersive soundscapes that add depth
+                to your projects.
               </li>
-              <li className='mb-6'>
-                <span className='font-semibold text-pink-500'>
+              <li className='mb-6 text-gray-800 dark:text-gray-200 font-medium'>
+                <span className='font-semibold text-pink-500 pr-2'>
                   Hassle-Free Downloads:
                 </span>
                 Your AI-constructed audio files are instantly downloadable with
                 just a click.
               </li>
-              <li className='mb-6'>
-                <span className='font-semibold text-pink-500'>
+              <li className='mb-6 text-gray-800 dark:text-gray-200 font-medium'>
+                <span className='font-semibold text-pink-500 pr-2'>
                   Precision Tuning:
                 </span>
                 We ensure each audio piece is fine-tuned to your exact
                 preferences and project requirements.
-              </li>
-              <li className='mb-6'>
-                <span className='font-semibold text-pink-500'>
-                  AI-Accelerated Creativity:
-                </span>
-                Amplify your creative process with our AI-powered audio
-                generation tool.
-              </li>
-              <li className='mb-6'>
-                <span className='font-semibold text-pink-500'>
-                  Elevate Your Sonic Experience:
-                </span>
-                VaryGen leverages AI to create captivating audio experiences
-                that engage and inspire.
               </li>
             </ul>
 

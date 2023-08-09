@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { ThemeProvider } from '@/components/theme-provider'
 import { ClerkProvider } from '@clerk/nextjs'
 import { ModalProvider } from '@/components/modal-provider'
 import { ToasterProvider } from '@/components/toaster-provider'
@@ -22,9 +23,11 @@ export default function RootLayout({
       <html lang='en'>
         <CrispProvider />
         <body className={inter.className}>
-          <ModalProvider />
-          <ToasterProvider />
-          {children}
+          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+            <ModalProvider />
+            <ToasterProvider />
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

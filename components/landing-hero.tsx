@@ -10,10 +10,12 @@ export const LandingHero = () => {
   const { isSignedIn } = useAuth()
 
   return (
-    <div className='text-white font-bold py-36 text-center space-y-5'>
+    <div className='text-gray-800 font-bold py-36 text-center space-y-5'>
       <div className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold'>
-        <h1>The Best AI Tool for</h1>
-        <div className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
+        <h1 className='text-gray-900 dark:text-gray-100'>
+          The Best AI Tool for
+        </h1>
+        <div className='mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
           <TypewriterComponent
             options={{
               strings: [
@@ -27,31 +29,38 @@ export const LandingHero = () => {
               ],
               autoStart: true,
               loop: true,
-
               delay: 50,
             }}
           />
         </div>
       </div>
-      <div className='text-sm md:text-xl font-semibold text-zinc-400 my-4'>
-        <span className='text-indigo-600'>Revolutionize</span> your content
-        creation with <span className='font-bold text-purple-600'>VaryGen</span>
+      <br />
+      <br />
+      <div className='text-sm md:text-xl font-semibold text-gray-600 dark:text-gray-200/60 '>
+        <span className='text-purple-600 dark:text-purple-400'>
+          Revolutionize
+        </span>{' '}
+        your content creation with{' '}
+        <span className='font-bold text-indigo-600 dark:text-blue-300'>
+          VaryGen
+        </span>
         , the ultimate AI-powered solution for your business.{' '}
         <span className='underline'>Supercharge your productivity</span> and
         unlock unparalleled efficiency with our advanced AI tools.
       </div>
+      <br />
 
       <div>
         <Link href={isSignedIn ? '/dashboard' : '/sign-up'}>
           <Button
             variant='premium'
-            className='md:text-lg p-4 md:p-6 rounded-full font-semibold'
+            className='md:text-lg p-4 md:p-6 rounded-full font-semibold  bg-indigo-100 hover:bg-indigo-200 dark:text-white'
           >
             Start Generating For Free
           </Button>
         </Link>
       </div>
-      <div className='text-zinc-400 text-xs md:text-sm font-normal'>
+      <div className='text-gray-500 dark:text-gray-300 text-xs md:text-sm font-normal'>
         No credit card required.
       </div>
     </div>

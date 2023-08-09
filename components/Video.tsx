@@ -11,40 +11,36 @@ export const VideoFeature = () => {
             muted
             playsInline
             preload='metadata'
-            className='w-full aspect-video mt-8 rounded-lg shadow-lg shadow-black'
+            className='w-full aspect-video mt-8 rounded-lg shadow-lg dark:shadow-white'
           >
             <source src='/conversation.mp4' type='video/mp4' />
           </video>
         </div>
         <div className='px-4 mb:px-0 mt-1 animate-fade-in'>
           <div className='px-6 py-4'>
-            <h2 className='text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600'>
+            <h2 className='text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-600 dark:from-teal-400 dark:to-cyan-500'>
               Experience AI-Powered
-              <span
-                className='px-3 underline  decoration-purple-500 
-                hover:decoration-blue-600 underline-offset-8
-                '
-              >
+              <span className='px-3 underline decoration-teal-500 hover:decoration-cyan-600 underline-offset-8 dark:decoration-teal-300 dark:hover:decoration-cyan-400'>
                 Video Generation
               </span>
             </h2>
-            <ul className='list-disc list-inside text-base text-gray-300 leading-6'>
-              <li className='mb-6'>
-                <span className='font-semibold text-purple-500'>
+            <ul className='list-disc list-inside text-base text-gray-700 dark:text-gray-200 leading-6'>
+              <li className='mb-6 font-medium'>
+                <span className='font-semibold text-teal-600 dark:text-teal-400 pr-2'>
                   Next-Level Video Quality:
                 </span>
                 With VaryGen, experience the magic of AI as it crafts visually
                 stunning and immersive videos for you.
               </li>
-              <li className='mb-6'>
-                <span className='font-semibold text-purple-500'>
+              <li className='mb-6 font-medium'>
+                <span className='font-semibold text-teal-600 dark:text-teal-400 pr-2'>
                   Instant Downloads:
                 </span>
                 Say goodbye to waiting. Access and download your AI-rendered
                 videos at the touch of a button.
               </li>
-              <li className='mb-6'>
-                <span className='font-semibold text-purple-500'>
+              <li className='mb-6 font-medium'>
+                <span className='font-semibold text-teal-600 dark:text-teal-400 pr-2'>
                   Tailored to Your Needs:
                 </span>
                 Every video we produce is uniquely molded to your specific
@@ -65,9 +61,10 @@ export const VideoFeature = () => {
                     text-base
                     font-medium
                     rounded-full
-                    bg-gradient-to-r from-purple-400 to-blue-600
-                    hover:from-purple-500 hover:to-blue-700
+                    bg-gradient-to-r from-teal-500 to-cyan-600
+                    hover:from-teal-600 hover:to-cyan-700
                     text-white
+                    dark:bg-gradient-to-r dark:from-teal-400 dark:to-cyan-500 dark:hover:from-teal-500 dark:hover:to-cyan-600
                     '
               >
                 Create Your Free First Video

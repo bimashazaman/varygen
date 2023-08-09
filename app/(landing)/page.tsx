@@ -6,13 +6,15 @@ import { ImageFeature } from '@/components/Image'
 import { VideoFeature } from '@/components/Video'
 import { AudioFeature } from '@/components/Audio'
 import HowItWorks from '@/components/HowItWorks'
+import PricingTable from '@/components/PricingTable'
+import { FAQS } from '@/components/FAQS'
 
 const LandingPage = () => {
   return (
     <div className='h-full '>
       <LandingNavbar />
       <LandingHero />
-      <h2 className='text-center text-4xl text-white font-extrabold mb-10'>
+      <h2 className='text-center text-4xl dark:text-white font-extrabold mb-10 text-gray-800'>
         Features
       </h2>
       <Conversation />
@@ -20,6 +22,8 @@ const LandingPage = () => {
       <VideoFeature />
       <AudioFeature />
       <CodeFeature />
+      <PricingTable />
+      <FAQS />
       <HowItWorks />
     </div>
   )

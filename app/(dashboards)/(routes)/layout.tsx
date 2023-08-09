@@ -31,7 +31,7 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
           <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} />
         </div>
       </div>
-      <div className='md:pl-72'>
+      <div className='md:pl-72 h-full bg-gradient-to-b dark:from-gray-900 dark:to-gray-800'>
         <Navbar />
         {children}
       </div>
