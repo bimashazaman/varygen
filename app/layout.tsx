@@ -23,7 +23,7 @@ export default function RootLayout({
       <html lang='en'>
         <CrispProvider />
         <body className={inter.className}>
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
             <ModalProvider />
             <ToasterProvider />
             {children}

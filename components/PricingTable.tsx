@@ -49,7 +49,7 @@ const PricingDeal: React.FC = () => (
           ⚠️ Price will increase by $200/month soon. Lock in your rate now!
         </p>
       </div>
-      <Link href='/settings'>
+      <Link href='/dashboard'>
         <button className='mt-4 w-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-800 dark:to-pink-800 text-white font-semibold py-2 md:py-3 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-600 transition-all duration-300'>
           Claim Offer Before It is Too Late!{' '}
           <span className='ml-2 animate-bounce'>➔</span>

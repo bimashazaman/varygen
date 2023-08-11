@@ -94,7 +94,7 @@ const CodePage = () => {
                   <FormItem className='col-span-12 lg:col-span-10'>
                     <FormControl className='m-0 p-0'>
                       <Input
-                        className='border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent'
+                        className='border-none outline-none focus-visible:ring-0 focus-visible:ring-transparent bg-transparent'
                         disabled={isLoading}
                         placeholder='Simple toggle button using react hooks.'
                         {...field}

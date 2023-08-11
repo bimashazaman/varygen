@@ -38,34 +38,35 @@ export const ProModal = () => {
 
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
-      <DialogContent>
+      <DialogContent className=' bg-gradient-to-t from-pink-100 to-yellow-100 dark:from-black dark:to-blue-950'>
         <DialogHeader>
-          <DialogTitle className='flex justify-center items-center flex-col gap-y-4 pb-2'>
-            <div className='flex items-center gap-x-2 font-bold text-xl'>
-              Upgrade to VaryGen
-              <Badge variant='premium' className='uppercase text-sm py-1'>
-                pro
-              </Badge>
-            </div>
+          <DialogTitle className='flex justify-center items-center flex-col gap-y-3 pb-4'>
+            <h2 className='text-2xl text-center font-bold dark:text-zinc-200 text-zinc-700'>
+              Elevate Your Experience with VaryGen Pro
+            </h2>
+            <p className='text-base dark:text-zinc-300 text-zinc-700 text-center'>
+              Join thousands who have harnessed exclusive features, premium
+              support, and unparalleled speed!
+            </p>
           </DialogTitle>
-          <DialogDescription className='text-center pt-2 space-y-2 text-zinc-900 font-medium'>
-            {tools.map((tool) => (
-              <Card
-                key={tool.href}
-                className='p-3 border-black/5 flex items-center justify-between'
-              >
-                <div className='flex items-center gap-x-4'>
-                  <div className={cn('p-2 w-fit rounded-md', tool.bgColor)}>
-                    <tool.icon className={cn('w-6 h-6', tool.color)} />
-                  </div>
-                  <div className='font-semibold text-sm'>{tool.label}</div>
-                </div>
-                <Check className='text-primary w-5 h-5' />
-              </Card>
-            ))}
-          </DialogDescription>
         </DialogHeader>
-        <DialogFooter>
+        <DialogDescription className='text-center text-zinc-900 font-medium px-4'>
+          {tools.map((tool) => (
+            <div
+              key={tool.href}
+              className='px-3 py-1 border-black/10 flex items-center justify-between hover:shadow-lg transition text-gray-800 dark:text-gray-200'
+            >
+              <div className='flex items-center gap-x-4'>
+                <div className={cn('p-2 w-fit ', tool.bgColor)}>
+                  <tool.icon className={cn('w-8 h-8', tool.color)} />
+                </div>
+                <div className='font-medium text-lg'>{tool.label}</div>
+              </div>
+              <Check className='w-6 h-6 text-green-600' />
+            </div>
+          ))}
+        </DialogDescription>
+        <div className='flex flex-col space-y-2'>
           <Button
             disabled={loading}
             onClick={onSubscribe}
@@ -73,10 +74,16 @@ export const ProModal = () => {
             variant='premium'
             className='w-full'
           >
-            Upgrade
-            <Zap className='w-4 h-4 ml-2 fill-white' />
+            Upgrade Now for Just $20/month
+            <Zap className='w-5 h-5 ml-2 fill-white' />
           </Button>
-        </DialogFooter>
+          <p className='text-xs text-center dark:text-zinc-300 text-zinc-600'>
+            Save 20% with yearly billing. 30-day money-back guarantee!
+          </p>
+          <p className='text-sm text-center dark:text-zinc-300 text-zinc-600 italic'>
+            Limited time offer. Don't miss out!
+          </p>
+        </div>
       </DialogContent>
     </Dialog>
   )
