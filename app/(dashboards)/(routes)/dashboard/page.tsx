@@ -61,7 +61,7 @@ const DashboardPage = () => {
 
   useEffect(() => {
     onOpen()
-  }, [])
+  }, [onOpen])
 
   return (
     <div className=' mb-8 space-y-4 px-2'>

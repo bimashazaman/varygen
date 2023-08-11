@@ -81,7 +81,7 @@ export const ProModal = () => {
             Save 20% with yearly billing. 30-day money-back guarantee!
           </p>
           <p className='text-sm text-center dark:text-zinc-300 text-zinc-600 italic'>
-            Limited time offer. Don't miss out!
+            Limited time offer. Do not miss out!
           </p>
         </div>
       </DialogContent>
