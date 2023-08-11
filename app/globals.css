@@ -99,3 +99,13 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+
+
+.slide-in {
+  transform: translateY(0);
+}
+
+.slide-out {
+  transform: translateY(100%);
+}

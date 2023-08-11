@@ -2,21 +2,14 @@ import Link from 'next/link'
 
 export const VideoFeature = () => {
   return (
-    <div className='px-10 pb-20 mt-14'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4'>
+    <div className='bg-gradient-to-b from-gray-200/10 to-pink-100 dark:from-gray-900 dark:to-gray-850 shadow hover:border-1 hover:border-pink-400 dark:hover:border-gray-500 rounded-3xl lg:m-8 m-4'>
+      <div className=' gap-4'>
         <div>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload='metadata'
-            className='w-full aspect-video mt-8 rounded-lg shadow-lg dark:shadow-white'
-          >
+          <video controls muted playsInline preload='metadata'>
             <source src='/conversation.mp4' type='video/mp4' />
           </video>
         </div>
-        <div className='px-4 mb:px-0 mt-1 animate-fade-in'>
+        <div className='lg:px-6 px-1 pt-4 animate-fade-in'>
           <div className='px-6 py-4'>
             <h2 className='text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-600 dark:from-teal-400 dark:to-cyan-500'>
               Experience AI-Powered
@@ -47,29 +40,6 @@ export const VideoFeature = () => {
                 preferences and requirements.
               </li>
             </ul>
-
-            <div className='mt-8 items-center'>
-              <Link
-                href='/video'
-                className='
-                    inline-flex 
-                    items-center
-                    justify-center
-                    px-5
-                    py-3
-                    border border-transparent
-                    text-base
-                    font-medium
-                    rounded-full
-                    bg-gradient-to-r from-teal-500 to-cyan-600
-                    hover:from-teal-600 hover:to-cyan-700
-                    text-white
-                    dark:bg-gradient-to-r dark:from-teal-400 dark:to-cyan-500 dark:hover:from-teal-500 dark:hover:to-cyan-600
-                    '
-              >
-                Create Your Free First Video
-              </Link>
-            </div>
           </div>
         </div>
       </div>

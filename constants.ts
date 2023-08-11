@@ -9,6 +9,8 @@ export const tools = [
     href: '/conversation',
     color: 'text-violet-500',
     bgColor: 'bg-violet-500/10',
+    description:
+      'Engage in seamless conversations and collaborations with our advanced chat tools.',
   },
   {
     label: 'Music Generation',
@@ -16,6 +18,8 @@ export const tools = [
     href: '/music',
     color: 'text-emerald-500',
     bgColor: 'bg-emerald-500/10',
+    description:
+      'Compose unique music with AI-assisted tools. Bring your melodies to life effortlessly.',
   },
   {
     label: 'Image Generation',
@@ -23,6 +27,8 @@ export const tools = [
     color: 'text-pink-700',
     bgColor: 'bg-pink-700/10',
     href: '/image',
+    description:
+      'Craft and edit captivating images with state-of-the-art tools. Amplify your creativity.',
   },
   {
     label: 'Video Generation',
@@ -30,6 +36,8 @@ export const tools = [
     color: 'text-orange-700',
     bgColor: 'bg-orange-700/10',
     href: '/video',
+    description:
+      'Produce and edit high-quality videos with ease. Elevate your content production game.',
   },
   {
     label: 'Code Generation',
@@ -37,5 +45,7 @@ export const tools = [
     color: 'text-green-700',
     bgColor: 'bg-green-700/10',
     href: '/code',
+    description:
+      'Streamline your development with AI-driven code suggestions. Code smarter, not harder.',
   },
 ]

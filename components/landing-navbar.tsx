@@ -18,7 +18,7 @@ export const LandingNavbar = () => {
           </div>
           <h1
             className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400
- dark:from-blue-400 dark:to-indigo-600'
+ dark:from-blue-400 dark:to-indigo-600 hidden lg:flex'
           >
             VaryGen
           </h1>
@@ -31,7 +31,7 @@ export const LandingNavbar = () => {
         <Link href={isSignedIn ? '/dashboard' : '/sign-up'}>
           <Button
             variant='outline'
-            className='transition-transform transform hover:scale-105 active:scale-100 rounded-full px-8 py-3 border-2 text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 dark:border-gray-400 shadow-md'
+            className='transition-transform transform hover:scale-105 active:scale-100 rounded-full lg:px-8 px-3 py-3 border-2 text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 dark:border-gray-400 shadow-md'
           >
             <span className='mr-3'>Get Started</span>
             <span className='relative flex h-5 w-5'>

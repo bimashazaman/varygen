@@ -10,12 +10,12 @@ export const LandingHero = () => {
   const { isSignedIn } = useAuth()
 
   return (
-    <div className='text-gray-800 font-bold py-36 text-center space-y-5'>
+    <div className='text-gray-800 font-bold lg:py-36 py-24 text-center space-y-5'>
       <div className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold'>
         <h1 className='text-gray-900 dark:text-gray-100'>
           The Best AI Tool for
         </h1>
-        <div className='mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
+        <div className=' text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
           <TypewriterComponent
             options={{
               strings: [
@@ -34,20 +34,20 @@ export const LandingHero = () => {
           />
         </div>
       </div>
-      <br />
-      <br />
-      <div className='text-sm md:text-xl font-semibold text-gray-600 dark:text-gray-200/60 '>
+
+      <div className='text-sm md:text-xl font-semibold text-gray-600 dark:text-gray-200/60 px-4'>
         <span className='text-purple-600 dark:text-purple-400'>
           Revolutionize
         </span>{' '}
-        your content creation with{' '}
-        <span className='font-bold text-indigo-600 dark:text-blue-300'>
-          VaryGen
+        with
+        <span className='font-bold text-indigo-600 dark:text-blue-300 px-1'>
+          VaryGen:
         </span>
-        , the ultimate AI-powered solution for your business.{' '}
-        <span className='underline'>Supercharge your productivity</span> and
-        unlock unparalleled efficiency with our advanced AI tools.
+        The AI that elevates your business.
+        <span className='underline px-1'>Boost productivity</span> with
+        unmatched AI efficiency.
       </div>
+
       <br />
 
       <div>
