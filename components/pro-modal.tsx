@@ -11,13 +11,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-  DialogFooter,
 } from '@/components/ui/dialog'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { useProModal } from '@/hooks/use-pro-modal'
 import { tools } from '@/constants'
-import { Card } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
 export const ProModal = () => {

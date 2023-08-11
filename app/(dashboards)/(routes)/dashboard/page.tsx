@@ -2,7 +2,6 @@
 
 import { Card } from '@/components/ui/card'
 import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
 
 import {
   MessageSquare,
@@ -12,7 +11,6 @@ import {
   Music,
   Code,
 } from 'lucide-react'
-import { useProModal } from '@/hooks/use-pro-modal'
 
 const tools = [
   {
@@ -57,11 +55,6 @@ const tools = [
 
 const DashboardPage = () => {
   const router = useRouter()
-  const { onOpen } = useProModal()
-
-  useEffect(() => {
-    onOpen()
-  }, [onOpen])
 
   return (
     <div className=' mb-8 space-y-4 px-2'>
