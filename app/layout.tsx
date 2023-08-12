@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { ClerkProvider } from '@clerk/nextjs'
@@ -23,10 +24,11 @@ export default function RootLayout({
       <html lang='en'>
         <CrispProvider />
         <body className={inter.className}>
-          <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+          <ThemeProvider attribute='class' defaultTheme='dark'>
             <ModalProvider />
             <ToasterProvider />
             {children}
+            <Analytics />
           </ThemeProvider>
         </body>
       </html>
