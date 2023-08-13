@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const CodeFeature = () => {
@@ -6,7 +7,7 @@ export const CodeFeature = () => {
       <div className=' gap-4'>
         <div>
           <div>
-            <video
+            {/* <video
               controls
               loop
               muted
@@ -15,7 +16,8 @@ export const CodeFeature = () => {
               className='w-full aspect-video'
             >
               <source src='/conversation.mp4' type='video/mp4' />
-            </video>
+            </video> */}
+            <Image src={'/code.png'} alt='image' width={600} height={300} />
           </div>
         </div>
         <div className='lg:px-6 px-1 pt-4 animate-fade-in'>

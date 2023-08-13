@@ -9,6 +9,7 @@ import HowItWorks from '@/components/HowItWorks'
 import PricingTable from '@/components/PricingTable'
 import { FAQS } from '@/components/FAQS'
 import UserJoinedToast from '@/components/UserJoinedToast'
+import Footer from '@/components/Footer'
 
 const LandingPage = () => {
   return (
@@ -29,6 +30,7 @@ const LandingPage = () => {
       <PricingTable />
       <FAQS />
       <HowItWorks />
+      <Footer />
     </div>
   )
 }
