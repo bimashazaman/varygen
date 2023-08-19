@@ -71,11 +71,11 @@ export const ProModal = () => {
             variant='premium'
             className='w-full'
           >
-            Upgrade Now for Just $20/month
+            Upgrade Now for Just $14.99/month
             <Zap className='w-5 h-5 ml-2 fill-white' />
           </Button>
           <p className='text-xs text-center dark:text-zinc-300 text-zinc-600'>
-            Save 20% with yearly billing. 30-day money-back guarantee!
+            The price will be increasing to 200$/month soon.
           </p>
           <p className='text-sm text-center dark:text-zinc-300 text-zinc-600 italic'>
             Limited time offer. Do not miss out!

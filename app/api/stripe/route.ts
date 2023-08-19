@@ -46,7 +46,7 @@ export async function GET() {
               name: 'VaryGen Pro',
               description: 'Unlimited AI Generations',
             },
-            unit_amount: 2000,
+            unit_amount: 1499,
             recurring: {
               interval: 'month',
             },

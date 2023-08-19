@@ -39,7 +39,7 @@ const PricingDeal: React.FC = () => (
     <div className='bg-gradient-to-br from-gray-50 to-gray-200 dark:from-black dark:to-blue-950 shadow-lg p-4 md:p-8 rounded-xl border border-gray-200 dark:border-indigo-800 transform hover:scale-105 transition-transform duration-300'>
       <div className='my-6'>
         <span className='font-bold text-2xl md:text-3xl dark:text-gray-200'>
-          Limited Time: $20/month!
+          Limited Time: $14.99/month!
         </span>
         <p className='text-sm dark:text-gray-400 mt-2'>
           Explore the zenith of our toolset. Transparent pricing. Freedom to
