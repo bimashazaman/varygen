@@ -15,24 +15,24 @@ interface ToolCardProps {
   tool: Tool
 }
 
-const ToolCard: React.FC<ToolCardProps> = ({ tool }) => (
-  <div
-    key={tool.label}
-    className='text-center p-4 md:p-5 lg:p-7 space-y-4 font-medium border bg-gradient-to-r from-gray-100 to-white rounded-lg shadow-lg dark:from-black dark:to-blue-980 hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105'
-  >
-    <div className='flex flex-col md:flex-row items-center justify-center gap-x-4 mb-4'>
-      <div className={cn('p-3 w-fit rounded-full animate-pulse', tool.bgColor)}>
-        <tool.icon className={cn('w-6 h-6 md:w-8 md:h-8', tool.color)} />
-      </div>
-      <h3 className='font-semibold text-lg md:text-xl tracking-tight'>
-        Unlock {tool.label} Mastery
-      </h3>
-    </div>
-    <p className='text-gray-700 dark:text-gray-300 text-sm mb-6 px-4'>
-      {tool.description}
-    </p>
-  </div>
-)
+// const ToolCard: React.FC<ToolCardProps> = ({ tool }) => (
+//   <div
+//     key={tool.label}
+//     className='text-center p-4 md:p-5 lg:p-7 space-y-4 font-medium border bg-gradient-to-r from-gray-100 to-white rounded-lg shadow-lg dark:from-black dark:to-blue-980 hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105'
+//   >
+//     <div className='flex flex-col md:flex-row items-center justify-center gap-x-4 mb-4'>
+//       <div className={cn('p-3 w-fit rounded-full animate-pulse', tool.bgColor)}>
+//         <tool.icon className={cn('w-6 h-6 md:w-8 md:h-8', tool.color)} />
+//       </div>
+//       <h3 className='font-semibold text-lg md:text-xl tracking-tight'>
+//         Unlock {tool.label}
+//       </h3>
+//     </div>
+//     <p className='text-gray-700 dark:text-gray-300 text-sm mb-6 px-4'>
+//       {tool.description}
+//     </p>
+//   </div>
+// )
 
 const PricingDeal: React.FC = () => (
   <div className='flex justify-center mt-8'>
@@ -87,11 +87,11 @@ const PricingTable: React.FC = () => {
         Supercharge your work with unparalleled tools. Embrace excellence
         without emptying your pockets.
       </p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 justify-center'>
+      {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 justify-center'>
         {tools.map((tool) => (
           <ToolCard key={tool.label} tool={tool} />
         ))}
-      </div>
+      </div> */}
       <br />
       <br />
       <PricingDeal />
