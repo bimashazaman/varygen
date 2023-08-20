@@ -43,7 +43,7 @@ export function FAQS() {
             How does the 5 free tasks offer work?
           </AccordionTrigger>
           <AccordionContent>
-            New users can explore VaryGen's capabilities with 5 tasks for free,
+            New users can explore our capabilities with 5 tasks for free,
             without any commitments. This allows you to experience our product
             firsthand before making any decisions.
           </AccordionContent>

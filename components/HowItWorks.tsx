@@ -5,7 +5,7 @@ const HowItWorks = () => {
   return (
     <section className='px-10 lg:mx-8 py-20 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-850 rounded-xl shadow-2xl transition-transform transform hover:scale-105'>
       <h2 className='text-center text-4xl font-bold text-gray-800 dark:text-gray-100 mb-10'>
-        Discover VaryGen's Simplicity
+        Discover the Simplicity
       </h2>
       <p className='text-center text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto'>
         Experience effortless elevation of your projects with VaryGen. In just a
