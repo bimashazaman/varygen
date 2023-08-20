@@ -1,49 +1,44 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 export const VideoFeature = () => {
   return (
-    <div className='bg-gradient-to-b from-gray-200/10 to-pink-100 dark:from-gray-900 dark:to-gray-850 shadow hover:border-1 hover:border-pink-400 dark:hover:border-gray-500 rounded-3xl lg:m-8 m-4'>
-      <div className=' gap-4'>
-        <div>
-          {/* <video controls muted playsInline preload='metadata'>
-            <source src='/conversation.mp4' type='video/mp4' />
-          </video> */}
-          <Image src={'/video.png'} alt='image' width={600} height={300} />
-        </div>
-        <div className='lg:px-6 px-1 pt-4 animate-fade-in'>
-          <div className='px-6 py-4'>
-            <h2 className='text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-600 dark:from-teal-400 dark:to-cyan-500'>
-              Experience AI-Powered
-              <span className='px-3 underline decoration-teal-500 hover:decoration-cyan-600 underline-offset-8 dark:decoration-teal-300 dark:hover:decoration-cyan-400'>
-                Video Generation
-              </span>
-            </h2>
-            <ul className='list-disc list-inside text-base text-gray-700 dark:text-gray-200 leading-6'>
-              <li className='mb-6 font-medium'>
-                <span className='font-semibold text-teal-600 dark:text-teal-400 pr-2'>
-                  Next-Level Video Quality:
-                </span>
-                With VaryGen, experience the magic of AI as it crafts visually
-                stunning and immersive videos for you.
-              </li>
-              <li className='mb-6 font-medium'>
-                <span className='font-semibold text-teal-600 dark:text-teal-400 pr-2'>
-                  Instant Downloads:
-                </span>
-                Say goodbye to waiting. Access and download your AI-rendered
-                videos at the touch of a button.
-              </li>
-              <li className='mb-6 font-medium'>
-                <span className='font-semibold text-teal-600 dark:text-teal-400 pr-2'>
-                  Tailored to Your Needs:
-                </span>
-                Every video we produce is uniquely molded to your specific
-                preferences and requirements.
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div className='bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-850 shadow-xl border-2 hover:border-teal-400 dark:hover:border-cyan-400 rounded-xl lg:m-12 m-8 transition-transform transform hover:scale-105 overflow-hidden'>
+      <div className='px-10 py-10 space-y-8'>
+        <h2 className='text-4xl font-extrabold leading-snug text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-600 dark:from-teal-400 dark:to-cyan-500 mb-8'>
+          <span className='hover:bg-teal-500 hover:text-teal-100 dark:hover:bg-cyan-400 dark:hover:text-white rounded-md px-2 py-1 transition-colors'>
+            Unlock the Future of
+          </span>{' '}
+          <br />
+          AI Video Generation
+        </h2>
+
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300'>
+          {/* Key Benefits with Icons */}
+          {[
+            {
+              title: 'Stellar Video Quality',
+              description:
+                "Dive into a world where VaryGen's AI creates impeccable, audience-grabbing videos.",
+              icon: '🎥',
+            },
+            {
+              title: 'Instant Downloads',
+              description:
+                'Your captivating AI-rendered videos are ready at a click, no delays.',
+              icon: '⚡',
+            },
+          ].map((feature, index) => (
+            <li key={index} className='flex items-start space-x-4'>
+              <span className='text-3xl'>{feature.icon}</span>
+              <div>
+                <h3 className='font-semibold text-teal-600 dark:text-cyan-500 mb-2'>
+                  {feature.title}
+                </h3>
+                <p className='text-gray-600 dark:text-gray-400'>
+                  {feature.description}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )

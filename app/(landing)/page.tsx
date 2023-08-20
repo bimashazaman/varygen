@@ -13,23 +13,51 @@ import Footer from '@/components/Footer'
 
 const LandingPage = () => {
   return (
-    <div className='h-full '>
+    <div className='h-full'>
+      {/* Header Section */}
       <LandingNavbar />
       <LandingHero />
       <UserJoinedToast />
-      <h2 className='text-center text-4xl dark:text-white font-extrabold mb-10 text-gray-800'>
-        Features
-      </h2>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2'>
-        <Conversation />
-        <ImageFeature />
-        <VideoFeature />
-        <AudioFeature />
-        <CodeFeature />
-      </div>
+
+      {/* Features Section */}
+      <section className='my-12'>
+        <h2 className='text-center text-4xl font-extrabold mb-10 text-gray-800 dark:text-white'>
+          Unlock the Power of Next-Gen Features
+        </h2>
+        <p className='text-center text-gray-600 dark:text-gray-300 mb-8'>
+          Empower your projects with cutting-edge AI solutions. Experience
+          efficiency like never before.
+        </p>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8'>
+          <Conversation />
+          <ImageFeature />
+          <VideoFeature />
+          <AudioFeature />
+          <CodeFeature />
+        </div>
+      </section>
+
+      {/* Pricing Section */}
       <PricingTable />
-      <FAQS />
-      <HowItWorks />
+
+      {/* Frequently Asked Questions */}
+      <section className='my-12'>
+        <FAQS />
+      </section>
+
+      {/* How It Works Section */}
+      <section className='my-12'>
+        <h2 className='text-center text-4xl font-extrabold mb-6 text-gray-800 dark:text-white'>
+          Seamless Integration, Simple Execution
+        </h2>
+        <p className='text-center text-gray-600 dark:text-gray-300 mb-8'>
+          Discover how easy it is to leverage AI in your workflows with just a
+          few steps.
+        </p>
+        <HowItWorks />
+      </section>
+
+      {/* Footer */}
       <Footer />
     </div>
   )
