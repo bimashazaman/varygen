@@ -75,7 +75,7 @@ export const ProModal = () => {
             <Zap className='w-5 h-5 ml-2 fill-white' />
           </Button>
           <p className='text-xs text-center dark:text-zinc-300 text-zinc-600'>
-            The price will be increasing to 200$/month soon.
+            The price will be increasing to 99$/month soon.
           </p>
           <p className='text-sm text-center dark:text-zinc-300 text-zinc-600 italic'>
             Limited time offer. Do not miss out!
