@@ -3,7 +3,7 @@ const WhyVarygen = () => {
     <section className='why-varygen-section py-20 '>
       <div className='container mx-auto px-4'>
         <h2 className='text-3xl font-bold mb-8 text-center'>Why Varygen?</h2>
-        
+
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           {/* All-In-One Platform */}
           <div className='flex flex-col items-center'>
@@ -40,7 +40,7 @@ const WhyVarygen = () => {
             </h3>
             <p>
               Our customer support team is here for you 24/7. Your satisfaction
-              is our top priority, and we're always here to help.
+              is our top priority, and we are always here to help.
             </p>
           </div>
         </div>

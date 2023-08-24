@@ -81,15 +81,11 @@ export const CodeFeature = () => {
           <pre className='code-feature__code-block text-xs sm:text-sm'>
             <code className='text-teal-400'>
               <span className='opacity-60'>1 | </span>
-              <span className='text-teal-500'>
-                function
-              </span> AIgeneratedCode() {'{'}
+              <span className='text-teal-500'>def</span>
+              {'AI_generated_code():'}
               <br />
               <span className='opacity-60'>2 | </span>
-              <span className='text-white'> return</span> 'Hello, World!';
-              <br />
-              <span className='opacity-60'>3 | </span>
-              {'}'}
+              <span className='text-white'> return</span> {'Hello, World!'}
             </code>
           </pre>
         </div>
