@@ -10,6 +10,7 @@ import PricingTable from '@/components/PricingTable'
 import { FAQS } from '@/components/FAQS'
 import UserJoinedToast from '@/components/UserJoinedToast'
 import Footer from '@/components/Footer'
+import WhyVarygen from '@/components/WhyVarygen'
 
 const LandingPage = () => {
   return (
@@ -54,6 +55,7 @@ const LandingPage = () => {
           Discover how easy it is to leverage AI in your workflows with just a
           few steps.
         </p>
+        <WhyVarygen />
         <HowItWorks />
       </section>
 
