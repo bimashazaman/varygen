@@ -3,8 +3,8 @@ import { LandingHero } from '@/components/landing-hero'
 import { CodeFeature } from '@/components/Code'
 import { Conversation } from '@/components/Conversation'
 import { ImageFeature } from '@/components/Image'
-import { VideoFeature } from '@/components/Video'
-import { AudioFeature } from '@/components/Audio'
+// import { VideoFeature } from '@/components/Video'
+// import { AudioFeature } from '@/components/Audio'
 import HowItWorks from '@/components/HowItWorks'
 import PricingTable from '@/components/PricingTable'
 import { FAQS } from '@/components/FAQS'
@@ -32,8 +32,6 @@ const LandingPage = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8'>
           <Conversation />
           <ImageFeature />
-          <VideoFeature />
-          <AudioFeature />
           <CodeFeature />
         </div>
       </section>

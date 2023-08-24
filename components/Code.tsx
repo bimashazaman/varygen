@@ -82,7 +82,7 @@ export const CodeFeature = () => {
             <code className='text-teal-400'>
               <span className='opacity-60'>1 | </span>
               <span className='text-teal-500'>def</span>
-              {'AI_generated_code():'}
+              {' AI_generated_code():'}
               <br />
               <span className='opacity-60'>2 | </span>
               <span className='text-white'> return</span> {'Hello, World!'}

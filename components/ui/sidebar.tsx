@@ -43,19 +43,19 @@ export const Sidebar = ({
       color: 'text-pink-600',
     },
 
-    {
-      name: 'Video Genaration',
-      path: '/video',
-      icon: VideoIcon,
-      color: 'text-orange-700',
-    },
+    // {
+    //   name: 'Video Genaration',
+    //   path: '/video',
+    //   icon: VideoIcon,
+    //   color: 'text-orange-700',
+    // },
 
-    {
-      name: 'Music Genaration',
-      path: '/music',
-      icon: Music,
-      color: 'text-emerald-500',
-    },
+    // {
+    //   name: 'Music Genaration',
+    //   path: '/music',
+    //   icon: Music,
+    //   color: 'text-emerald-500',
+    // },
 
     {
       name: 'Code Genaration',

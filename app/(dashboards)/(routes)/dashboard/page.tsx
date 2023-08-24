@@ -28,21 +28,21 @@ const tools = [
     href: '/image',
   },
 
-  {
-    label: 'Video Genaration',
-    icon: VideoIcon,
-    color: 'text-orange-700',
-    bColor: 'bg-orange-700/10',
-    href: '/video',
-  },
+  // {
+  //   label: 'Video Genaration',
+  //   icon: VideoIcon,
+  //   color: 'text-orange-700',
+  //   bColor: 'bg-orange-700/10',
+  //   href: '/video',
+  // },
 
-  {
-    label: 'Music Genaration',
-    icon: Music,
-    color: 'text-emerald-500',
-    bColor: 'bg-emerald-500/10',
-    href: '/music',
-  },
+  // {
+  //   label: 'Music Genaration',
+  //   icon: Music,
+  //   color: 'text-emerald-500',
+  //   bColor: 'bg-emerald-500/10',
+  //   href: '/music',
+  // },
 
   {
     label: 'Code Genaration',
