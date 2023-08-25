@@ -4,10 +4,9 @@ import {
   LayoutDashboard,
   MessageSquare,
   ImageIcon,
-  VideoIcon,
-  Music,
   Code,
   Settings,
+  Newspaper,
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -43,19 +42,13 @@ export const Sidebar = ({
       color: 'text-pink-600',
     },
 
-    // {
-    //   name: 'Video Genaration',
-    //   path: '/video',
-    //   icon: VideoIcon,
-    //   color: 'text-orange-700',
-    // },
-
-    // {
-    //   name: 'Music Genaration',
-    //   path: '/music',
-    //   icon: Music,
-    //   color: 'text-emerald-500',
-    // },
+    //cover letter
+    {
+      name: 'Cover Letter',
+      path: '/letter',
+      icon: Newspaper,
+      color: 'text-orange-500',
+    },
 
     {
       name: 'Code Genaration',
@@ -77,12 +70,10 @@ export const Sidebar = ({
   return (
     <div className=' space-y-4 flex flex-col h-full  text-white'>
       <div className='  flex-1'>
-        <Link href='/dashboard' className=' flex items-center pl-3 mb-14'>
-          <div className=' items-center text-start flex mt-4'>
+        <Link href='/dashboard'>
+          <div className='flex items-center space-x-4 mb-8 hover:opacity-90 transition'>
             <Image src='/logo/logo.png' alt='logo' width={60} height={60} />
-            <h1 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-400'>
-              VaryGen
-            </h1>
+            <h1 className='text-2xl font-extrabold text-white'>VaryGen</h1>
           </div>
         </Link>
 

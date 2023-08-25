@@ -27,6 +27,10 @@ const namesAndLocations: User[] = [
   { name: 'Isabella Iberia', location: 'Madrid' },
   { name: 'Lucas Paulo', location: 'Sao Paulo' },
   { name: 'Mia Roman', location: 'Rome' },
+  { name: 'Noah Dutch', location: 'Amsterdam' },
+  { name: 'Ava Aussie', location: 'Canberra' },
+  { name: 'William Swiss', location: 'Bern' },
+  { name: 'Riley Kiwi', location: 'Wellington' },
   { name: 'Ethan Lion', location: 'Singapore' },
   { name: 'Amelia Kiwi', location: 'Wellington' },
   { name: 'Aiden Windy', location: 'Chicago' },
@@ -63,6 +67,26 @@ const namesAndLocations: User[] = [
   { name: 'Mila Taipei', location: 'Taipei' },
   { name: 'Theo Bund', location: 'Shanghai' },
   { name: 'Hannah Taj', location: 'Delhi' },
+  { name: 'Sebastian Swiss', location: 'Zurich' },
+  { name: 'Layla Fado', location: 'Lisbon' },
+  { name: 'Jackie Maple', location: 'Montreal' },
+  { name: 'Ava Aussie', location: 'Melbourne' },
+  { name: 'Leo Lion', location: 'Nairobi' },
+  { name: 'Poppy Paddy', location: 'Dublin' },
+  { name: 'Archie Aussie', location: 'Sydney' },
+  { name: 'Florence French', location: 'Paris' },
+  { name: 'Arthur Aussie', location: 'Canberra' },
+  { name: 'Daisy Dutch', location: 'Amsterdam' },
+  { name: 'Logan Aussie', location: 'Brisbane' },
+  { name: 'Freya French', location: 'Paris' },
+  { name: 'Theodore Aussie', location: 'Canberra' },
+  { name: 'Elsie Dutch', location: 'Amsterdam' },
+  { name: 'Finley Aussie', location: 'Canberra' },
+  { name: 'Evelyn French', location: 'Paris' },
+  { name: 'Gabriel Aussie', location: 'Canberra' },
+  { name: 'Isla Dutch', location: 'Amsterdam' },
+  { name: 'Harrison Aussie', location: 'Canberra' },
+  { name: 'Tarekujjaman Riad', location: 'Dhaka' },
 ]
 
 const UserJoinedToast: React.FC = () => {
@@ -75,10 +99,10 @@ const UserJoinedToast: React.FC = () => {
         namesAndLocations[Math.floor(Math.random() * namesAndLocations.length)]
       setToast(randomUser)
       setIsVisible(true)
-      setTimeout(() => setIsVisible(false), 5000) // Hide toast after 5 seconds for better visibility
+      setTimeout(() => setIsVisible(false), 5000) // Hide toast after 7 seconds for better visibility
     }
 
-    const interval = setInterval(showToast, 8000)
+    const interval = setInterval(showToast, 10000)
     return () => clearInterval(interval)
   }, [])
 
@@ -86,13 +110,16 @@ const UserJoinedToast: React.FC = () => {
 
   return (
     <div
-      className={`z-[100] fixed left-0 bottom-4 bg-gradient-to-r from-pink-800 to-purple-600 dark:from-blue-700 dark:to-blue-950 text-white p-4 rounded-tr rounded-br shadow-lg transform transition-transform duration-300 animate-accordion-down px-5 font-thin`}
+      className={`z-[100] fixed left-0 bottom-4 bg-gradient-to-r 
+      from-blue-500 to-blue-600 dark:from-pink-500 dark:to-pink-600 px-4 py-2 rounded-md shadow-md text-white
+      `}
     >
-      <span className='text-blue-200 px-2 dark:text-pink-300 font-bold'>
+      <span className='text-blue-100 px-2 dark:text-pink-100 font-bold'>
         {toast.name}
       </span>
-      from <span className='text-green-300 font-bold'>{toast.location}</span>{' '}
-      just joined VaryGen and using Unlimited AI tools.
+      from{' '}
+      <span className='text-green-200 font-bold'>{toast.location + ' '}</span>
+      just joined VaryGen!
       <span className='ml-2'>🎉</span>
     </div>
   )

@@ -63,80 +63,69 @@ const ConversationPage = () => {
   }
 
   return (
-    <div>
+    <div className='container mx-auto py-8'>
       <Heading
         title='Conversation'
         description='Our most advanced conversation model.'
         icon={MessageSquare}
-        iconColor='text-violet-500'
-        bgColor='bg-violet-500/10'
+        iconColor='text-violet-500 dark:text-violet-300'
+        bgColor='bg-violet-500/10 dark:bg-violet-500/20'
       />
-      <div className='px-4 lg:px-8'>
-        <div>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className='
-                rounded-lg 
-                border 
-                w-full 
-                p-4 
-                px-3 
-                md:px-6 
-                focus-within:shadow-sm
-                grid
-                grid-cols-12
-                gap-2
-              '
+      <div className='px-4 lg:px-8 dark:text-gray-200 mt-8'>
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className='rounded-lg shadow-md w-full p-6 grid grid-cols-12 gap-4'
+          >
+            <FormField
+              name='prompt'
+              render={({ field }) => (
+                <FormItem className='col-span-12 lg:col-span-10'>
+                  <FormControl>
+                    <Input
+                      className='border-2 border-violet-300 focus:border-violet-500 rounded-lg w-full px-4 py-2 dark:bg-gray-800'
+                      disabled={isLoading}
+                      placeholder='What is the meaning of life?'
+                      {...field}
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <Button
+              className='col-span-12 lg:col-span-2 w-full bg-violet-500 hover:bg-violet-600 transition-colors duration-200 dark:bg-violet-400 text-white rounded-lg'
+              type='submit'
+              disabled={isLoading}
             >
-              <FormField
-                name='prompt'
-                render={({ field }) => (
-                  <FormItem className='col-span-12 lg:col-span-10'>
-                    <FormControl className='m-0 p-0'>
-                      <Input
-                        className='border-none outline-none focus-visible:ring-0 focus-visible:ring-transparent bg-transparent'
-                        disabled={isLoading}
-                        placeholder='How do I calculate the radius of a circle?'
-                        {...field}
-                      />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              <Button
-                className='col-span-12 lg:col-span-2 w-full bg-violet-500 text-white'
-                type='submit'
-                disabled={isLoading}
-                size='icon'
-              >
-                Generate
-              </Button>
-            </form>
-          </Form>
-        </div>
-        <div className='space-y-4 mt-4'>
+              Generate
+            </Button>
+          </form>
+        </Form>
+        <div className='space-y-4 mt-8'>
           {isLoading && (
-            <div className='p-8 rounded-lg w-full flex items-center justify-center bg-muted'>
+            <div className='p-8 rounded-lg shadow-md w-full flex items-center justify-center bg-muted dark:bg-gray-700'>
               <Loader />
             </div>
           )}
           {messages.length === 0 && !isLoading && (
             <Empty label='No conversation started.' />
           )}
-          <div className='flex flex-col-reverse gap-y-4'>
-            {messages.map((message) => (
+          <div className='flex flex-col-reverse gap-y-6'>
+            {messages.map((message, index) => (
               <div
-                key={message.content}
+                key={index}
                 className={cn(
-                  'p-8 w-full flex items-start gap-x-8 rounded-lg',
+                  'p-6 w-full flex items-start gap-x-6 rounded-lg shadow-md',
                   message.role === 'user'
-                    ? 'bg-white border border-black/10'
-                    : 'bg-muted'
+                    ? 'bg-white dark:bg-gray-800 border dark:border-gray-700'
+                    : 'bg-muted dark:bg-gray-700'
                 )}
               >
                 {message.role === 'user' ? <UserAvatar /> : <BotAvatar />}
-                <p className='text-sm'>{message.content}</p>
+                <p className='text-base' style={{ whiteSpace: 'pre-line' }}>
+                  {message.content}
+                </p>
               </div>
             ))}
           </div>

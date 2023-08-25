@@ -1,4 +1,4 @@
-import { Code, ImageIcon, MessageSquare, Music, VideoIcon } from 'lucide-react'
+import { Code, ImageIcon, MessageSquare, Newspaper } from 'lucide-react'
 
 export const MAX_FREE_COUNTS = 3
 
@@ -12,15 +12,7 @@ export const tools = [
     description:
       'Engage in seamless conversations and collaborations with our advanced chat tools.',
   },
-  {
-    label: 'Music Generation',
-    icon: Music,
-    href: '/music',
-    color: 'text-emerald-500',
-    bgColor: 'bg-emerald-500/10',
-    description:
-      'Compose unique music with AI-assisted tools. Bring your melodies to life effortlessly.',
-  },
+
   {
     label: 'Image Generation',
     icon: ImageIcon,
@@ -30,15 +22,17 @@ export const tools = [
     description:
       'Craft and edit captivating images with state-of-the-art tools. Amplify your creativity.',
   },
+  // Cover letter generation
   {
-    label: 'Video Generation',
-    icon: VideoIcon,
+    label: 'Cover Letter Generation',
+    icon: Newspaper,
     color: 'text-orange-700',
     bgColor: 'bg-orange-700/10',
-    href: '/video',
+    href: '/letter',
     description:
-      'Produce and edit high-quality videos with ease. Elevate your content production game.',
+      'Craft and edit captivating cover letters with state-of-the-art tools. Amplify your creativity.',
   },
+
   {
     label: 'Code Generation',
     icon: Code,

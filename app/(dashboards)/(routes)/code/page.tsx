@@ -62,39 +62,28 @@ const CodePage = () => {
   }
 
   return (
-    <div>
+    <div className=' text-gray-900 dark:text-gray-100 py-6'>
       <Heading
         title='Code Generation'
         description='Generate code using descriptive text.'
         icon={Code}
-        iconColor='text-green-700'
-        bgColor='bg-green-700/10'
+        iconColor='text-green-700 dark:text-green-300'
+        bgColor='bg-green-700/10 dark:bg-green-700/20'
       />
       <div className='px-4 lg:px-8'>
-        <div>
+        <div className='border-b border-gray-200 dark:border-gray-600'>
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className='
-                rounded-lg 
-                border 
-                w-full 
-                p-4 
-                px-3 
-                md:px-6 
-                focus-within:shadow-sm
-                grid
-                grid-cols-12
-                gap-2
-              '
+              className='rounded-lg shadow-md w-full p-6 grid grid-cols-12 gap-4'
             >
               <FormField
                 name='prompt'
                 render={({ field }) => (
                   <FormItem className='col-span-12 lg:col-span-10'>
-                    <FormControl className='m-0 p-0'>
+                    <FormControl>
                       <Input
-                        className='border-none outline-none focus-visible:ring-0 focus-visible:ring-transparent bg-transparent'
+                        className='border-2 border-green-600 focus:border-green-700 rounded-lg w-full px-4 py-2 dark:bg-gray-800'
                         disabled={isLoading}
                         placeholder='Simple toggle button using react hooks.'
                         {...field}
@@ -116,7 +105,7 @@ const CodePage = () => {
         </div>
         <div className='space-y-4 mt-4'>
           {isLoading && (
-            <div className='p-8 rounded-lg w-full flex items-center justify-center bg-muted'>
+            <div className='p-8 rounded-lg w-full flex items-center justify-center bg-muted dark:bg-gray-700'>
               <Loader />
             </div>
           )}
@@ -130,20 +119,38 @@ const CodePage = () => {
                 className={cn(
                   'p-8 w-full flex items-start gap-x-8 rounded-lg',
                   message.role === 'user'
-                    ? 'bg-white border border-black/10'
-                    : 'bg-muted'
+                    ? 'bg-white dark:bg-gray-700 border border-gray-100 dark:border-gray-800'
+                    : 'bg-muted dark:bg-gray-700'
                 )}
               >
                 {message.role === 'user' ? <UserAvatar /> : <BotAvatar />}
                 <ReactMarkdown
                   components={{
                     pre: ({ node, ...props }) => (
-                      <div className='overflow-auto w-full my-2 bg-black/10 p-2 rounded-lg'>
+                      <div className='overflow-auto w-full my-2 bg-black/10 dark:bg-gray-900 p-2 rounded-lg lg:px-2'>
+                        {' '}
+                        <div className='flex justify-end'>
+                          <Button
+                            className='text-xs'
+                            size='icon'
+                            onClick={() => {
+                              navigator.clipboard.writeText(
+                                message.content || ''
+                              )
+                              toast.success('Copied to clipboard.')
+                            }}
+                          >
+                            Copy
+                          </Button>
+                        </div>
                         <pre {...props} />
                       </div>
                     ),
                     code: ({ node, ...props }) => (
-                      <code className='bg-black/10 rounded-lg p-1' {...props} />
+                      <code
+                        className='bg-black/10 dark:bg-gray-900 rounded-lg p-1'
+                        {...props}
+                      />
                     ),
                   }}
                   className='text-sm overflow-hidden leading-7'
