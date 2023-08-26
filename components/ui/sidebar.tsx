@@ -7,6 +7,8 @@ import {
   Code,
   Settings,
   Newspaper,
+  CopyMinus,
+  Book,
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -50,6 +52,21 @@ export const Sidebar = ({
       color: 'text-orange-500',
     },
 
+    ///contenst-summarization
+    {
+      name: 'Content Summarization',
+      path: '/summarization',
+      icon: CopyMinus,
+      color: 'text-green-500',
+    },
+    //story generation
+    {
+      name: 'Story Generation',
+      path: '/story',
+      icon: Book,
+      color: 'text-blue-500',
+    },
+
     {
       name: 'Code Genaration',
       path: '/code',
@@ -68,7 +85,7 @@ export const Sidebar = ({
   const pathname = usePathname()
 
   return (
-    <div className=' space-y-4 flex flex-col h-full  text-white'>
+    <div className=' space-y-4 flex flex-col h-full  text-white overflow-y-auto'>
       <div className='  flex-1'>
         <Link href='/dashboard'>
           <div className='flex items-center space-x-4 mb-8 hover:opacity-90 transition'>

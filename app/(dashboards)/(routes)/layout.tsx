@@ -13,7 +13,7 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
         className={`
     hidden md:flex h-full md:flex-col md:fixed md:inset-y-0 
     bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900
-    text-gray-100 w-64 px-4 overflow-y-auto md:w-72 md:px-8 drop-shadow-xl
+    text-gray-100 w-64 px-4 overflow-y-auto md:w-72 md:px-8 drop-shadow-xl min-vh-full
   `}
       >
         <div>
@@ -21,7 +21,7 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
         </div>
       </div>
 
-      <div className='md:pl-72 h-full bg-gradient-to-b dark:from-gray-900 dark:to-gray-800'>
+      <div className='md:pl-72 h-[100%] bg-gradient-to-b dark:from-gray-900 dark:to-gray-800'>
         <Navbar />
         {children}
       </div>

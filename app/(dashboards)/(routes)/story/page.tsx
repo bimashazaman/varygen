@@ -2,7 +2,7 @@
 
 import * as z from 'zod'
 import axios from 'axios'
-import { Newspaper } from 'lucide-react'
+import { Book } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import { toast } from 'react-hot-toast'
@@ -28,9 +28,9 @@ import { UserAvatar } from '@/components/user-avatar'
 import { Empty } from '@/components/ui/empty'
 import { useProModal } from '@/hooks/use-pro-modal'
 
-import { formSchema } from './constants'
+import { formSchema, languages } from './constants'
 
-const CoverLetter = () => {
+const Story = () => {
   const router = useRouter()
   const proModal = useProModal()
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([])
@@ -38,10 +38,11 @@ const CoverLetter = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      prompt: '',
-      tone: '',
-      wordCount: '',
-      applicantType: '',
+      theme: '',
+      setting: '',
+      length: '',
+      characters: '',
+      languages: '',
     },
   })
 
@@ -51,7 +52,7 @@ const CoverLetter = () => {
     try {
       const userMessage: ChatCompletionRequestMessage = {
         role: 'user',
-        content: `Generate a ${values.tone} tone cover letter for a ${values.applicantType} applicant. The letter should be approximately ${values.wordCount} words long, with paragraphs separated by blank lines. Here are the specifics: ${values.prompt}`,
+        content: `Generate a story in ${values.languages} with the theme ${values.theme}, set in ${values.setting}. The story should have approximately ${values.length} words and involve these characters: ${values.characters}.`,
       }
       const newMessages = [...messages, userMessage]
 
@@ -75,27 +76,64 @@ const CoverLetter = () => {
   return (
     <div className='container mx-auto py-8 px-0 dark:bg-gray-900'>
       <Heading
-        title='Cover Letter Generator'
-        description='Generate a cover letter for your next job application.'
-        icon={Newspaper}
-        iconColor='text-orange-500 dark:text-orange-300'
-        bgColor='bg-orange-500/10 dark:bg-orange-500/20'
+        title='Story Generator'
+        description='Generate a story with the theme, setting, length, and characters of your choice.'
+        icon={Book}
+        iconColor='text-blue-500 dark:text-blue-300'
+        bgColor='bg-blue-500/10 dark:bg-blue-500/20'
       />
       <div className='px-0 lg:px-8 dark:text-gray-200 mt-8'>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className='rounded-lg shadow-md w-full p-6 grid grid-cols-6 gap-4'
+            className='rounded-lg shadow-md w-full p-6 space-y-5 gap-4'
           >
             <FormField
-              name='prompt'
+              name='theme'
               render={({ field }) => (
-                <FormItem className='col-span-12 lg:col-span-10'>
+                <FormItem className='col-span-12 lg:col-span-6 '>
+                  <FormControl>
+                    <Select
+                      disabled={isLoading}
+                      onValueChange={field.onChange}
+                      value={field.value}
+                      defaultValue={field.value}
+                    >
+                      <SelectTrigger className='border-2 border-blue-300 focus:border-blue-500 rounded-lg w-full px-4 py-2 dark:bg-gray-800'>
+                        <SelectValue>
+                          Theme: {field.value || 'Select one'}
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value='Adventure'>Adventure</SelectItem>
+                        <SelectItem value='Romance'>Funny</SelectItem>
+                        <SelectItem value='Romance'>Romance</SelectItem>
+                        <SelectItem value='Mystery'>Mystery</SelectItem>
+                        <SelectItem value='Sci-fi'>Sci-fi</SelectItem>
+                        <SelectItem value='Fantasy'>Fantasy</SelectItem>
+                        <SelectItem value='Horror'>Horror</SelectItem>
+                        <SelectItem value='Thriller'>Thriller</SelectItem>
+                        <SelectItem value='Comedy'>Comedy</SelectItem>
+                        <SelectItem value='Drama'>Drama</SelectItem>
+                        <SelectItem value='Action'>Action</SelectItem>
+                        <SelectItem value='Historical'>Historical</SelectItem>
+                        <SelectItem value='Western'>Western</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              name='setting'
+              render={({ field }) => (
+                <FormItem className='col-span-12 lg:col-span-6'>
                   <FormControl>
                     <Textarea
-                      className='border-2 border-orange-300 focus:border-orange-500 rounded-lg w-full px-4 py-2 dark:bg-gray-800'
+                      className='border-2 border-blue-300 focus:border-blue-500 rounded-lg w-full px-4 py-2 dark:bg-gray-800'
                       disabled={isLoading}
-                      placeholder='Paste your job description or proposal here.'
+                      placeholder='Describe the setting (e.g. a bustling city in 2050).'
                       {...field}
                     />
                   </FormControl>
@@ -104,7 +142,7 @@ const CoverLetter = () => {
             />
 
             <FormField
-              name='tone'
+              name='length'
               render={({ field }) => (
                 <FormItem className='col-span-6 lg:col-span-3'>
                   <FormControl>
@@ -114,64 +152,56 @@ const CoverLetter = () => {
                       value={field.value}
                       defaultValue={field.value}
                     >
-                      <SelectTrigger>
-                        <SelectValue>{field.value} tone</SelectValue>
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value='formal'>Formal</SelectItem>
-                        <SelectItem value='casual'>Casual</SelectItem>
-                        <SelectItem value='unique'>Unique</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              name='applicantType'
-              render={({ field }) => (
-                <FormItem className='col-span-6 lg:col-span-3'>
-                  <FormControl>
-                    <Select
-                      disabled={isLoading}
-                      onValueChange={field.onChange}
-                      value={field.value}
-                      defaultValue={field.value}
-                    >
-                      <SelectTrigger>
-                        <SelectValue>{field.value} applicant</SelectValue>
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value='team'>Team</SelectItem>
-                        <SelectItem value='individual'>Individual</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              name='wordCount'
-              render={({ field }) => (
-                <FormItem className='col-span-6 lg:col-span-3'>
-                  <FormControl>
-                    <Select
-                      disabled={isLoading}
-                      onValueChange={field.onChange}
-                      value={field.value}
-                      defaultValue={field.value}
-                    >
-                      <SelectTrigger>
+                      <SelectTrigger className='border-2 border-blue-300 focus:border-blue-500 rounded-lg w-full px-4 py-2 dark:bg-gray-800'>
                         <SelectValue>{field.value} words</SelectValue>
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value='10'>10 words</SelectItem>
-                        <SelectItem value='50'>50 words</SelectItem>
-                        <SelectItem value='100'>100 words</SelectItem>
-                        <SelectItem value='200'>200 words</SelectItem>
-                        <SelectItem value='300'>300 words</SelectItem>
+                        <SelectItem value='100'>Short (100 words)</SelectItem>
+                        <SelectItem value='500'>Medium (500 words)</SelectItem>
+                        <SelectItem value='1000'>Long (1000 words)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              name='characters'
+              render={({ field }) => (
+                <FormItem className='col-span-12 lg:col-span-6'>
+                  <FormControl>
+                    <Textarea
+                      className='border-2 border-blue-300 focus:border-blue-500 rounded-lg w-full px-4 py-2 dark:bg-gray-800'
+                      disabled={isLoading}
+                      placeholder='Describe the main characters (e.g. John, a retired detective).'
+                      {...field}
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              name='languages'
+              render={({ field }) => (
+                <FormItem className='col-span-12 lg:col-span-6'>
+                  <FormControl>
+                    <Select
+                      disabled={isLoading}
+                      onValueChange={field.onChange}
+                      value={field.value}
+                      defaultValue={field.value}
+                    >
+                      <SelectTrigger className='border-2 border-blue-300 focus:border-blue-500 rounded-lg w-full px-4 py-2 dark:bg-gray-800'>
+                        <SelectValue>Language: {field.value}</SelectValue>
+                      </SelectTrigger>
+                      <SelectContent>
+                        {languages.map((lang) => (
+                          <SelectItem key={lang} value={lang}>
+                            {lang}
+                          </SelectItem>
+                        ))}
                       </SelectContent>
                     </Select>
                   </FormControl>
@@ -180,7 +210,7 @@ const CoverLetter = () => {
             />
 
             <Button
-              className='col-span-12 w-full bg-orange-500 hover:bg-orange-600 transition-colors duration-200 dark:bg-orange-400 text-white rounded-lg'
+              className='col-span-12 w-full bg-blue-500 hover:bg-blue-600 transition-colors duration-200 dark:bg-blue-400 text-white rounded-lg'
               type='submit'
               disabled={isLoading}
             >
@@ -188,6 +218,7 @@ const CoverLetter = () => {
             </Button>
           </form>
         </Form>
+
         <div className='space-y-4 mt-8'>
           {isLoading && (
             <div className='p-8 rounded-lg shadow-md w-full flex items-center justify-center bg-muted dark:bg-gray-700'>
@@ -221,4 +252,4 @@ const CoverLetter = () => {
   )
 }
 
-export default CoverLetter
+export default Story

@@ -22,7 +22,7 @@ export const MobileSidebar = ({
       </SheetTrigger>
       <SheetContent
         side='left'
-        className='p-0  bg-gradient-to-b from-black to-blue-950 text-white'
+        className='p-0  bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white'
       >
         <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} />
       </SheetContent>
