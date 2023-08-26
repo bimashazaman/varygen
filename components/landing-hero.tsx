@@ -19,13 +19,18 @@ export const LandingHero = () => {
           <TypewriterComponent
             options={{
               strings: [
-                'AI Chat Generations.',
-                'Gen Image from Text.',
-                'Smart Content Writing.',
+                'Conversational AI.',
+                'Text Generation.',
+                'Text Summarization.',
+                'Image Generation.',
                 'Code Generation.',
-                'Text-Powered Infographics.',
+                'Summarization.',
+                'Cover Letter Generation.',
+                'Content Generation.',
+                'Story Generation.',
                 'Resume Generation.',
-                'Article Generation.',
+                'Translation.',
+                'And More...',
               ],
               autoStart: true,
               loop: true,

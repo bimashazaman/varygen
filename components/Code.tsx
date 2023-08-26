@@ -40,17 +40,17 @@ export const CodeFeature = () => {
                 'Streamline your workflow with AI-generated code snippets.',
             },
             {
-              title: 'Precision & Personalization',
-              description: 'Get code tailored to your requirements.',
+              title: 'Find Bugs Faster',
+              description: 'AI-powered debugging to find bugs in seconds.',
             },
             {
-              title: 'AI-Driven Development',
-              description: 'Enhance your coding journey with AI at every step.',
+              title: 'AI-Powered Suggestions',
+              description: 'AI-powered suggestions to improve your code.',
             },
             {
-              title: 'Adaptive Learning',
+              title: 'Personalized Suggestions',
               description:
-                'The AI learns your preferences for even better suggestions over time.',
+                'AI-powered suggestions tailored to your coding style.',
             },
           ].map((feature, index) => (
             <li

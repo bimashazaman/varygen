@@ -1,4 +1,5 @@
 import { Facebook, Linkedin, Twitter } from 'lucide-react'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -34,13 +35,12 @@ const Footer = () => {
 
         {/* Call to Action */}
         <div className='mb-6 md:mb-0'>
-          <a
-            href='#'
-            className='bg-gradient-to-r from-purple-500 to-pink-600 dark:from-purple-800 dark:to-pink-500 text-white font-semibold py-2 md:py-3 rounded-md shadow-lg hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-600  px-6 inline-flex items-cente transition-all duration-300'
-          >
-            Join VaryGen Today!
-            <i className='fas fa-arrow-right ml-2'></i>
-          </a>
+          <Link href='/sign-up'>
+            <div className='bg-gradient-to-r from-purple-500 to-pink-600 dark:from-purple-800 dark:to-pink-500 text-white font-semibold py-2 md:py-3 rounded-md shadow-lg hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-600  px-6 inline-flex items-cente transition-all duration-300'>
+              Join VaryGen Today!
+              <i className='fas fa-arrow-right ml-2'></i>
+            </div>
+          </Link>
         </div>
 
         {/* Social Media Icons */}

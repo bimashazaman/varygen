@@ -15,10 +15,21 @@ export const ImageFeature = () => {
           {/* Key Benefits with Icons */}
           {[
             {
-              title: 'High-Resolution Output',
+              title: 'AI-Generated Images',
               description:
-                'Experience AI-crafted images that are second to none in quality.',
+                'Get AI-generated images that are perfect for your needs.',
               icon: '🖼️',
+            },
+            {
+              title: 'Text-to-Image Generation',
+              description: 'Generate images from text with the power of AI.',
+              icon: '📝',
+            },
+            {
+              title: 'Quality Images',
+              description:
+                'Get high-quality images that are perfect for your needs.',
+              icon: '📷',
             },
             {
               title: 'One-Click Downloads',

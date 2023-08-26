@@ -15,27 +15,27 @@ export const Conversation = () => {
           {/* Key Benefits with Icons */}
           {[
             {
-              title: 'Innovative Text Generation',
+              title: 'Conversation AI Assistant',
               description:
-                'Dive into a world of AI-powered, context-rich content creation.',
-              icon: '📝',
-            },
-            {
-              title: 'Personalized Output',
-              description:
-                'Tailored solutions to meet your unique content needs.',
-              icon: '👥',
-            },
-            {
-              title: 'AI-Powered Excellence',
-              description:
-                'A transformative approach to text generation with AI at its core.',
+                'An AI assistant that can help you with all your needs.',
               icon: '🤖',
             },
             {
-              title: 'Break Content Boundaries',
+              title: 'AI Virtual Assistant for All',
               description:
-                'Let VaryGen craft compelling narratives from raw inputs.',
+                'A virtual assistant that can help you with all your needs.',
+              icon: '👥',
+            },
+            {
+              title: 'Question Answering AI Assistant',
+              description:
+                'Ask questions and get answers from the AI assistant.',
+              icon: '❓',
+            },
+            {
+              title: 'Complicated Tasks Made Easy',
+              description:
+                'Simplify your life with AI-powered tools that do the work for you.',
               icon: '🚀',
             },
           ].map((feature, index) => (

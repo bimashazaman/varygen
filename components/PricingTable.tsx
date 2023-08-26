@@ -15,6 +15,11 @@ const PricingTable: React.FC = () => {
 
       <PricingDeal />
       <br />
+
+      <h2 className='text-center text-4xl md:text-5xl dark:text-white font-bold my-8 text-gray-900'>
+        What Our Users Say
+      </h2>
+
       <Testimonials />
     </div>
   )

@@ -9,6 +9,10 @@ import HowItWorks from '@/components/HowItWorks'
 import PricingTable from '@/components/PricingTable'
 import UserJoinedToast from '@/components/UserJoinedToast'
 import Footer from '@/components/Footer'
+import Summurize from '@/components/Summurize'
+import CoverLetterGen from '@/components/CoverLetterGen'
+import StoryGen from '@/components/StoryGen'
+import MeetTheFounder from '@/components/MeetTheFounder'
 
 const LandingPage = () => {
   return (
@@ -30,12 +34,26 @@ const LandingPage = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8'>
           <Conversation />
           <ImageFeature />
+          <Summurize />
+          <CoverLetterGen />
+          <StoryGen />
           <CodeFeature />
         </div>
       </section>
 
       {/* Pricing Section */}
       <PricingTable />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <h2 className='text-center text-4xl font-extrabold mb-10 text-gray-800 dark:text-white'>
+        A Heartfelt Journey of a Fearless Founder
+      </h2>
+      <MeetTheFounder />
+      <br />
+      <br />
 
       {/* Frequently Asked Questions */}
       <section className='my-12'>
