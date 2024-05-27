@@ -9,7 +9,9 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -17,7 +19,7 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
@@ -35,7 +37,7 @@ const ContactForm = () => {
         },
         (err) => {
           console.log("FAILED...", err);
-          toast.error("Failed to send message");
+          alert("Failed to send message");
         }
       );
   };
@@ -44,7 +46,7 @@ const ContactForm = () => {
     <section className="bg-black text-white py-20" id="contact-us">
       <div className="container mx-auto px-4 flex justify-center items-center flex-wrap">
         <div className="lg:w-1/2 md:w-1/2">
-          <form onSubmit={handleSubmit} className=" p-8 h-full">
+          <form onSubmit={handleSubmit} className="p-8 h-full">
             <h2 className="text-3xl font-bold mb-6">
               Get A Free Marketing Analysis:
             </h2>
@@ -53,12 +55,12 @@ const ContactForm = () => {
             </p>
 
             <p className="text-gray-400 mb-6">
-              Fill out the form and we'll get back to you within 48 hours.
+              Fill out the form and we&apos;ll get back to you within 48 hours.
             </p>
 
             <p className="text-gray-400 mb-6">
-              No obligations, no annoying high pressure sales tactics. We won't
-              waste your time.
+              No obligations, no annoying high pressure sales tactics. We
+              won&apos;t waste your time.
             </p>
             <div className="mb-4">
               <label className="block text-gray-400 text-sm font-bold mb-2">
@@ -105,7 +107,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="w-full border-2 border-gray-200 border-2 border-gray-200-white text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-gray-800"
+              className="w-full border-2 border-gray-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-gray-800"
             >
               Send Message
             </button>

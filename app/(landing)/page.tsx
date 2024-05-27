@@ -54,10 +54,10 @@ const LandingPage = () => {
               description: (
                 <>
                   We only win if you win. <br />
-                  That's the basis for a good partnership. <br />
+                  That&apos;s the basis for a good partnership. <br />
                   <br />
-                  You won't carry all the risk, <br />
-                  we'll share it.
+                  You won&apos;t carry all the risk, <br />
+                  we&apos;ll share it.
                 </>
               ),
             },
@@ -78,7 +78,7 @@ const LandingPage = () => {
                   Jack of all trades... master of none. <br />
                   Specialization works. <br />
                   <br />
-                  That's why we work with industries we know, <br />
+                  That&apos;s why we work with industries we know, <br />
                   so we can guarantee results.
                 </>
               ),
@@ -89,8 +89,8 @@ const LandingPage = () => {
                 <>
                   No hidden fees, no hidden agendas. <br />
                   <br />
-                  We're upfront about what we can do <br />
-                  and what we can't.
+                  We&apos;re upfront about what we can do <br />
+                  and what we can&apos;t.
                 </>
               ),
             },
@@ -121,7 +121,7 @@ const LandingPage = () => {
         className="bg-gray-800 text-white text-center p-4 mx-0 w-full"
         style={{ marginTop: "auto" }}
       >
-        <p>© 2021 All rights reserved.</p>
+        <p>&copy; 2021 All rights reserved.</p>
       </footer>
     </div>
   );
