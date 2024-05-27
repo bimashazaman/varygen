@@ -42,9 +42,9 @@ export const ImageFeature = () => {
               key={index}
               className="image-feature__item  items-start space-x-2 lg:space-x-4"
             >
-              <div className="conversation__feature-icon  text-center text-[6rem]  ">
+              {/* <div className="conversation__feature-icon  text-center text-[6rem]  ">
                 {feature.icon}
-              </div>
+              </div> */}
               <div>
                 <h3 className="image-feature__item-title text-sm lg:text-md font-semibold text-blue-600 dark:text-indigo-500 mb-1 lg:mb-2">
                   {feature.title}

@@ -39,9 +39,9 @@ export const Summurize = () => {
             // },
           ].map((feature, index) => (
             <li key={index} className=" tems-start space-x-2 lg:space-x-4">
-              <div className="conversation__feature-icon  text-center text-[6rem]  ">
+              {/* <div className="conversation__feature-icon  text-center text-[6rem]  ">
                 {feature.icon}
-              </div>
+              </div> */}
               <div>
                 <h3 className=" text-sm lg:text-md font-semibold text-green-600 dark:text-cyan-500 mb-1 lg:mb-2">
                   {feature.title}
