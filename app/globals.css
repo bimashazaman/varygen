@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -13,8 +11,6 @@
     opacity: 1;
   }
 }
-
-
 
 html,
 body,
@@ -88,19 +84,16 @@ body,
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    /* @apply bg-[#0b1829] text-foreground; */
+    /* background-color: white; */
   }
 }
-
-
 
 .slide-in {
   transform: translateY(0);
