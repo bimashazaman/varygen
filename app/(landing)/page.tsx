@@ -98,7 +98,7 @@ const LandingPage = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className='transform hover:-translate-y-2 transition-transform duration-300 border-4 border-gray-200 dark:border-gray-700 rounded-xl shadow-xl hover:shadow-2xl'
+              className='transform hover:-translate-y-2 transition-transform duration-300 border-4 border-gray-200 dark:border-gray-700 rounded-xl shadow-xl hover:shadow-2xl bg-white dark:bg-gray-800'
             >
               <div className='p-10 text-center'>
                 <h3 className='text-2xl font-extrabold text-gray-800 dark:text-white mb-4'>

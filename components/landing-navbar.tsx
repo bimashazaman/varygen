@@ -10,7 +10,7 @@ export const LandingNavbar = () => {
   const { isSignedIn } = useAuth()
 
   return (
-    <nav className='shadow-md flex items-center justify-between transition-all duration-300 bg-white dark:bg-gray-900 h-24'>
+    <nav className='shadow-md flex items-center justify-between transition-all duration-300 bg-blue-900/10 dark:bg-gray-900 h-24 px-3'>
       <Link href='/'>
         <div className='flex items-center cursor-pointer'>
           <div className='relative w-[18rem] h-[18rem] '>
@@ -25,9 +25,9 @@ export const LandingNavbar = () => {
       </Link>
       <div className='flex items-center gap-x-3 lg:gap-x-5'>
         {/* Mode Toggle */}
-        {/* <div className='hidden md:block'>
+        <div className='hidden md:block'>
           <ModeToggle />
-        </div> */}
+        </div>
         {/* Get Started Button */}
         {/* <Link href={isSignedIn ? '/dashboard' : '/sign-up'}>
           <Button
