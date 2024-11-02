@@ -113,7 +113,7 @@ const LandingPage = () => {
         </div>
       </section>
       {/* Testimonials */}
-      <section className='my-12' id='contact'>
+      <section className='my-12 px-3' id='contact'>
         <h2 className='text-center text-4xl font-extrabold mb-10 text-gray-800 dark:text-white'>
           What Our Clients Say
         </h2>

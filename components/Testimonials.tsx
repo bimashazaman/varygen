@@ -72,33 +72,33 @@ export const Testimonials: React.FC = () => (
         className='bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-lg'
       >
         <div className='flex-row items-center md:items-start'>
-          <div className='flex items-center'>
+          <div className='flex items-center mb-2'>
             <svg
-              className='w-4 h-4 fill-current text-yellow-500'
+              className='w-6 h-6 fill-current text-yellow-500'
               viewBox='0 0 24 24'
             >
               <path d='M12 2.69l1.902 5.832h6.142l-4.972 3.617 1.902 5.832-4.972-3.617-4.972 3.617 1.902-5.832-4.972-3.617h6.142z' />
             </svg>{' '}
             <svg
-              className='w-4 h-4 fill-current text-yellow-500'
+              className='w-6 h-6 fill-current text-yellow-500'
               viewBox='0 0 24 24'
             >
               <path d='M12 2.69l1.902 5.832h6.142l-4.972 3.617 1.902 5.832-4.972-3.617-4.972 3.617 1.902-5.832-4.972-3.617h6.142z' />
             </svg>
             <svg
-              className='w-4 h-4 fill-current text-yellow-500'
+              className='w-6 h-6 fill-current text-yellow-500'
               viewBox='0 0 24 24'
             >
               <path d='M12 2.69l1.902 5.832h6.142l-4.972 3.617 1.902 5.832-4.972-3.617-4.972 3.617 1.902-5.832-4.972-3.617h6.142z' />
             </svg>
             <svg
-              className='w-4 h-4 fill-current text-yellow-500'
+              className='w-6 h-6 fill-current text-yellow-500'
               viewBox='0 0 24 24'
             >
               <path d='M12 2.69l1.902 5.832h6.142l-4.972 3.617 1.902 5.832-4.972-3.617-4.972 3.617 1.902-5.832-4.972-3.617h6.142z' />
             </svg>
             <svg
-              className='w-4 h-4 fill-current text-yellow-500'
+              className='w-6 h-6 fill-current text-yellow-500'
               viewBox='0 0 24 24'
             >
               <path d='M12 2.69l1.902 5.832h6.142l-4.972 3.617 1.902 5.832-4.972-3.617-4.972 3.617 1.902-5.832-4.972-3.617h6.142z' />
