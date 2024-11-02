@@ -12,29 +12,29 @@ export const LandingHero = () => {
   return (
     <div className='text-gray-800 font-bold lg:py-36 py-24  space-y-5 flex'>
       <div className=' w-full'>
-        <div className=' sm:text-xl md:text-6xl space-y-5 font-extrabold '>
+        <div className='space-y-5 font-extrabold sm:text-2xl md:text-6xl'>
           <h1 className='text-gray-900 dark:text-gray-100'>
             Build. Grow. Scale.
           </h1>
-          <div className='text-transparent bg-clip-text sm:text-xl md:text-4xl bg-gradient-to-r from-purple-400 to-pink-600'>
+          <div className='bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent sm:text-2xl md:text-5xl'>
             <TypewriterComponent
               options={{
                 strings: [
-                  'with custom software',
-                  'with innovative websites',
-                  'with seamless integrations',
-                  'with scalable solutions',
+                  'with custom software solutions',
+                  'with innovative web experiences',
+                  'with seamless system integrations',
+                  'with scalable digital platforms',
                   'with cutting-edge technology',
-                  'with modern design',
-                  'with robust applications',
-                  'with powerful tools',
-                  'with user-friendly interfaces',
-                  'with responsive layouts',
-                  'with dynamic content',
+                  'with modern, intuitive design',
+                  'with robust, secure applications',
+                  'with powerful, efficient tools',
+                  'with user-centric interfaces',
+                  'with responsive, adaptive layouts',
+                  'with engaging, dynamic content',
                 ],
                 autoStart: true,
                 loop: true,
-                delay: 60,
+                delay: 50,
               }}
             />
           </div>

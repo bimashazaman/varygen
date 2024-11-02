@@ -1,113 +1,66 @@
 const reviews = [
   {
-    name: 'Ethan White',
+    name: 'Ewan McBride',
     comment:
-      'The code generator is a revelation. I was able to prototype faster and more efficiently. The code snippets it provided were spot-on and required minimal tweaking.',
-    imgSrc: '/logo/logo.png',
+      'Their attention to detail and commitment to understanding our needs were impressive. The software they delivered exceeded our expectations in both performance and usability.',
   },
   {
-    name: 'Amelia Wilson',
+    name: 'Felicity Meadows',
     comment:
-      'As a marketing specialist, visuals are crucial for my campaigns. The image generator has allowed me to tailor graphics that resonate with my target audience.',
-    imgSrc: '/logo/logo.png',
-  },
-  {
-    name: 'Liam Taylor',
-    comment:
-      'The text generation tool is now a staple in my content strategy. It’s like having a co-writer that understands my audience’s needs. The content suggestions have been invaluable.',
-    imgSrc: '/logo/logo.png',
-  },
-  {
-    name: 'Benjamin Lee',
-    comment:
-      'For someone who’s not a natural storyteller, the story generator has been a boon. My content is richer, and my audience engagement has seen a noticeable bump.',
-    imgSrc: '/logo/logo.png',
-  },
-  {
-    name: 'Jane Smith',
-    comment:
-      'As a content creator, the text generation feature is a game-changer for me. The output is coherent and well-structured.',
-    imgSrc: '/logo/logo.png',
-  },
-  {
-    name: 'Robert Brown',
-    comment:
-      'I was initially skeptical about the story generator, but after trying it out, I was amazed by the quality of the output.',
-    imgSrc: '/logo/logo.png',
-  },
-  {
-    name: 'Aisha Patel',
-    comment:
-      'Creating a cover letter has never been this easy. I landed an interview using a cover letter generated from here!',
-    imgSrc: '/logo/logo.png',
-  },
-  {
-    name: 'Leo Martinez',
-    comment:
-      'As a developer, the code generation tool saved me countless hours. It understands context really well and offers efficient solutions.',
-    imgSrc: '/logo/logo.png',
-  },
-  {
-    name: 'Sophie Lee',
-    comment:
-      'Using this platform has elevated the quality of my work. The generated texts are seamless, and the images align well with my requirements.',
-    imgSrc: '/logo/logo.png',
-  },
-  {
-    name: 'Lucas Fernandez',
-    comment:
-      'The versatility of this tool is its strong suit. I can use it for a variety of purposes, and it never fails to impress me.',
-    imgSrc: '/logo/logo.png',
+      'Our app had complex requirements, but this team handled everything with expertise. The final product was robust, well-optimized, and the support we received was outstanding.',
   },
 
   {
-    name: 'Ava Lee',
+    name: 'Liora Baines',
     comment:
-      'The story generator is a hidden gem! Perfect for brainstorming sessions, it gave me diverse perspectives on storytelling.',
-    imgSrc: '/logo/logo.png',
+      'The team’s approach to agile development made all the difference for us. We saw progress at every stage, and they were responsive to our feedback, delivering a product we’re proud of.',
   },
   {
-    name: 'Jackson Tan',
+    name: 'Tobias Ellery',
     comment:
-      'From conceptualizing to execution, this platform supports every creative endeavor. A must-have tool in my toolkit now!',
-    imgSrc: '/logo/logo.png',
+      'We needed a solution that could handle high traffic, and they delivered just that. Our platform runs smoothly even during peak hours, and the performance is impressive.',
   },
   {
-    name: 'Noah Kim',
+    name: 'Neela Fernandes',
     comment:
-      'The cover letter tool helped me secure my dream job! The generated content was professional and apt for the role I applied for.',
-    imgSrc: '/logo/logo.png',
+      'Their UX/UI expertise made our application incredibly user-friendly. We’ve received fantastic feedback from our clients on how intuitive the interface is.',
+  },
+
+  {
+    name: 'Jonas Lindstrom',
+    comment:
+      'Their technical support after deployment has been fantastic. Any minor issues were quickly resolved, and they were proactive in optimizing our system.',
   },
   {
-    name: 'Emma Garcia',
+    name: 'Anya Malik',
     comment:
-      'As a non-tech founder, the code generator is a boon. It gave me quick solutions, enabling me to communicate effectively with my tech team.',
-    imgSrc: '/logo/logo.png',
-  },
-  //more unique testimonials
-  {
-    name: 'Olivia Smith',
-    comment:
-      'The image generation tool blew me away! Never thought AI could produce such high-quality images.',
-    imgSrc: '/logo/logo.png',
+      'Our SaaS platform needed high reliability, and this team delivered. The uptime has been excellent, and our users appreciate the reliability.',
   },
   {
-    name: 'Sophia Johnson',
+    name: 'Magnus O’Donnell',
     comment:
-      'As a content creator, the text generation feature is a game-changer for me. The output is coherent and well-structured.',
-    imgSrc: '/logo/logo.png',
+      'From idea to launch, they guided us through each phase with transparency and skill. Their technical insights helped us make decisions that saved time and costs.',
   },
   {
-    name: 'Isabella Williams',
+    name: 'Lina Brunner',
     comment:
-      'I was initially skeptical about the story generator, but after trying it out, I was amazed by the quality of the output.',
-    imgSrc: '/logo/logo.png',
+      'I’m a non-technical founder, and they made everything easy to understand. They kept us informed and involved, which was key to achieving a product that aligns with our vision.',
+  },
+
+  {
+    name: 'Viktorija Petrović',
+    comment:
+      'The web app they delivered was beyond our expectations. It’s scalable, secure, and aligns perfectly with our business goals.',
   },
   {
-    name: 'Mia Brown',
+    name: 'Sinead Ó Murchadha',
     comment:
-      'Creating a cover letter has never been this easy. I landed an interview using a cover letter generated from here!',
-    imgSrc: '/logo/logo.png',
+      'Their approach to security and data privacy was crucial for our healthcare project. They ensured compliance and built a system we trust.',
+  },
+  {
+    name: 'Kiran Gupta',
+    comment:
+      'Their project management was top-notch, and they kept us updated throughout. The final product was delivered on time and functions flawlessly.',
   },
 ]
 

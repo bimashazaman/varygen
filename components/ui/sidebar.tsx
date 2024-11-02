@@ -90,7 +90,6 @@ export const Sidebar = ({
         <Link href='/dashboard'>
           <div className='flex items-center space-x-4 mb-8 hover:opacity-90 transition'>
             <Image src='/logo/logo.png' alt='logo' width={60} height={60} />
-            <h1 className='text-2xl font-extrabold text-white'>VaryGen</h1>
           </div>
         </Link>
 
